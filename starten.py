@@ -17,7 +17,7 @@ pyGameBilder = []
 # Bilder aus meinSpiel werden für pygame vorbereitet
 meinSpiel = MeinSpiel(FelderX, FelderY,Pixel)
 for fname in meinSpiel.bilder:
-    pyGameBilder.append(pygame.image.load(fname))
+    pyGameBilder.append(pygame.transform.scale(pygame.image.load(fname),(60,60)))
 
 
 # Definieren und Öffnen eines neuen Fensters
@@ -46,9 +46,11 @@ while True:
         for y in range(FelderY):  #draw scene
             fenster.blit(pyGameBilder[meinSpiel.spielfeld[x][y]],(x*Pixel,y*Pixel))
     
-    fenster.blit(pyGameBilder[1],(meinSpiel.player_pos[0],meinSpiel.player_pos[1]))
+    fenster.blit(pyGameBilder[3],(meinSpiel.player_pos[0],meinSpiel.player_pos[1]))
 
-    # Spielfeld/figuren zeichnen
+    for point in meinSpiel.collsion_points :
+        pygame.draw.circle(fenster,(255,0,0),(point[0],point[1]),4) #draw debug collison points
+
 
     # Fenster aktualisieren
     pygame.display.flip()

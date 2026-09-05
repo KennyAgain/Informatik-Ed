@@ -32,12 +32,12 @@ while True:
         # Beenden bei [ESC] oder [X]
         if event.type==pygame.QUIT or (event.type==pygame.KEYDOWN and event.key==pygame.K_ESCAPE):
             pygame.quit()
-
     # Spiellogik
-        if event.type==pygame.KEYDOWN:
+        if event.type==pygame.KEYDOWN:          
             meinSpiel.key_pressed(event.key)
         if event.type==pygame.KEYUP:
             meinSpiel.key_released(event.key)
+
     
     meinSpiel.CullPhysics() #Cull physiscs
 
@@ -48,8 +48,10 @@ while True:
     
     fenster.blit(pyGameBilder[3],(meinSpiel.player_pos[0],meinSpiel.player_pos[1]))
 
-    for point in meinSpiel.collsion_points :
-        pygame.draw.circle(fenster,(255,0,0),(point[0],point[1]),4) #draw debug collison points
+    for i,point in enumerate(meinSpiel.collsion_points):
+        if i < 4: pygame.draw.circle(fenster,(255,0,0),(point[0],point[1]),4) #draw debug collison points
+        else:pygame.draw.circle(fenster,(0,255,0),(point[0],point[1]),4) #draw debug collison points
+        
 
 
     # Fenster aktualisieren

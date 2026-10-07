@@ -2,7 +2,7 @@ import meinspiel
 class Enemy:
 
     def __init__(self,x,y,type):
-        sprites = ["legacy\Bilder\goomba.png","legacy\Bilder\koopa_blue.png","legacy\Bilder\koopa_shell.png"]
+        sprites = ["Bilder\goomba.png","Bilder\koopa_blue.png","Bilder\koopa_shell.png"]
         self.x = x
         self.y = y
         self.type = type
@@ -43,7 +43,7 @@ class Enemy:
 class PowerUp:
 
     def __init__(self,x,y,type):
-        sprites = ["legacy\Bilder\mushroom.png"]
+        sprites = ["Bilder\mushroom.png"]
         self.x = x
         self.y = y
         self.type = type
@@ -77,7 +77,7 @@ class PowerUp:
 
 class Coin:
     def __init__(self,x,y):
-        self.sprite = ["legacy\Bilder/1.png","legacy\Bilder/2.png","legacy\Bilder/3.png","legacy\Bilder/4.png"]
+        self.sprite = ["Bilder/1.png","Bilder/2.png","Bilder/3.png","Bilder/4.png"]
         self.image = self.sprite[0]
         self.x = x
         self.y = y
@@ -95,7 +95,7 @@ class Coin:
 
 class Flag_Pole:
     def __init__(self,x,y):
-        self.sprites = ["legacy\Bilder\Pole.png","legacy\Bilder\Flag.png"]
+        self.sprites = ["Bilder\Pole.png","Bilder\Flag.png"]
         self.raised_pos = 6.5*60 #the height that the flag is raised relativ to the pole base
         self.hit = False #if the player hits the pole
         self.x,self.y = x,y #index

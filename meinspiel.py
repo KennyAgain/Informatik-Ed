@@ -5,8 +5,8 @@ import math
 
 class MeinSpiel:
     #bilder = ["Spiel\Bilder\dirt.jpg","Spiel\Bilder/apo.png","Spiel\Bilder\Grass.jpg","Spiel\Bilder\Sky.jpg"]
-    bilder = ["legacy\Bilder\Sky.jpg","legacy\Bilder/brick.jpg",
-              "legacy\Bilder\hard_brick.jpg","legacy\Bilder\Mari_big.png","legacy\Bilder\Mario_small.png"]
+    bilder = ["Bilder\Sky.jpg","Bilder/brick.jpg",
+              "Bilder\hard_brick.jpg","Bilder\Mari_big.png","Bilder\Mario_small.png"]
     spielfeld = [] 
     player_pos = []
     player_vel=[]
@@ -28,7 +28,7 @@ class MeinSpiel:
         self.power_ups=[]
         self.coins = []
         self.enemys = []
-        self.data_path = "legacy\level_data.txt"
+        self.data_path = "level_data.txt"
         self.can_jump = False
         self.jumping = False
         self.fieldSize = fieldSize
